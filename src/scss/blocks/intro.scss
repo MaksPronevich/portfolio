@@ -4,8 +4,11 @@
 }
 
 .intro-wrap {
-	display: grid;
-	grid-template-columns: auto 1fr;
+	// display: grid;
+	// grid-template-columns: auto 1fr;
+	// align-items: center;
+	display: flex;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -14,7 +17,7 @@
 		font-family: 'Cormorant Unicase', serif;
 		font-size: 2.143rem;
 		font-weight: $fw-semiBold;
-		text-align: center;
+		text-align: right;
 		text-transform: uppercase;
 	}
 
