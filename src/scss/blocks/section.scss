@@ -1,0 +1,31 @@
+.section {
+	padding: 50px 0px;
+	border-bottom: 1px solid $beige;
+
+	&.intro {
+		padding-top: 130px;
+	}
+}
+
+.section__title {
+	display: inline-block;
+	font-size: 1.429rem;
+	font-family: 'Podkova', serif;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	background-color: $light-beige;
+	border-radius: 60%;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -4px;
+		right: -4px;
+		bottom: -4px;
+		left: -4px;
+		border: 1px solid $black;
+		border-radius: 60%;
+		transform: translate(1px, -1px);
+	}
+}

@@ -59,19 +59,87 @@ a {
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 35px;
+  font-family: 'Podkova', serif;
+  font-size: 1.143rem;
+  color: #000000;
+  text-transform: uppercase;
+  border: 1px solid #a78c73;
+  border-radius: 60%;
+  position: relative;
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.btn:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 1px solid #a78c73;
+  border-radius: 60%;
+}
+
+.btn:hover {
+  background-color: #a78c73;
+  color: #ffffff;
+}
+
+.section {
+  padding: 50px 0px;
+  border-bottom: 1px solid #a78c73;
+}
+
+.section.intro {
+  padding-top: 130px;
+}
+
+.section__title {
+  display: inline-block;
+  font-size: 1.429rem;
+  font-family: 'Podkova', serif;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  background-color: #d3c0ae;
+  border-radius: 60%;
+  position: relative;
+}
+
+.section__title:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border: 1px solid #000000;
+  border-radius: 60%;
+  -webkit-transform: translate(1px, -1px);
+  -ms-transform: translate(1px, -1px);
+  transform: translate(1px, -1px);
 }
 
 .header {
-  border-bottom: 1px solid #a78c73;
   padding: 30px 0px;
+  background-color: #d3c0ae;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .header-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -106,7 +174,7 @@ a {
   top: 2px;
   width: 0;
   height: 100%;
-  border-bottom: 2px solid #a78c73;
+  border-bottom: 2px solid #000000;
   -webkit-transition: 0.5s linear;
   -o-transition: 0.5s linear;
   transition: 0.5s linear;
@@ -114,4 +182,32 @@ a {
 
 .header-nav__link:hover:before {
   width: 100%;
+}
+
+.intro {
+  background: url("../img/intro/intro-bg.png") no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.intro-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.intro-description__title {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 2.143rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro-description__text {
+  font-family: 'Podkova', serif;
+  font-size: 1.286rem;
+  margin-top: 50px;
+  text-align: right;
 }

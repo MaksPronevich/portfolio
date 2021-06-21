@@ -1,10 +1,15 @@
 .header {
-	border-bottom: 1px solid $beige;
+	// border-bottom: 1px solid $beige;
 	padding: 30px 0px;
+	background-color: $light-beige;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 
 .header-wrap {
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto;
 	justify-content: space-between;
 }
 
@@ -35,7 +40,7 @@
 			top: 2px;
 			width: 0;
 			height: 100%;
-			border-bottom: 2px solid $beige;
+			border-bottom: 2px solid $black;
 			transition: $transition-long;
 		}
 

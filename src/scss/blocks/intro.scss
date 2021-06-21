@@ -1,0 +1,27 @@
+.intro {
+	background: url('../img/intro/intro-bg.png') no-repeat center center/cover;
+	background-attachment: fixed;
+}
+
+.intro-wrap {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+}
+
+.intro-description {
+	&__title {
+		font-family: 'Cormorant Unicase', serif;
+		font-size: 2.143rem;
+		font-weight: $fw-semiBold;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-family: 'Podkova', serif;
+		font-size: 1.286rem;
+		margin-top: 50px;
+		text-align: right;
+	}
+}
