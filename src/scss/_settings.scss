@@ -1,0 +1,90 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	font-size: 1rem;
+	// font-family: 'Podkova', serif;
+	// font-family: 'Cormorant Unicase', serif;
+	font-family: 'Jura', sans-serif;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+ul,
+ol {
+	padding: 0;
+	list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+	margin: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+
+	// @include media-breakpoint-up($xxl) {
+	// 	max-width: 1320px;
+	// }
+
+	// @include media-breakpoint-up($xl) {
+	// 	max-width: 1140px;
+	// }
+
+	// @include media-breakpoint-up($lg) {
+	// 	max-width: 960px;
+	// }
+
+	// @include media-breakpoint-up($md) {
+	// 	max-width: 720px;
+	// }
+
+	// @include media-breakpoint-up($sm) {
+	// 	max-width: 540px;
+	// }
+
+	// @include media-breakpoint-down($sm) {
+	// 	max-width: auto;
+	// 	padding: 0px 15px;
+	// }
+}
