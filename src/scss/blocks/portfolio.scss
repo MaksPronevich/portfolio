@@ -1,0 +1,61 @@
+.portfolio {
+	&__wrap {
+		display: grid;
+		grid-template-columns: 50% 1fr;
+		gap: 8rem;
+	}
+
+	&__item {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.portfolio-nav {
+	margin-top: 45px;
+
+	&__item {
+		margin-bottom: 15px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		font-size: 1.286rem;
+		font-weight: $fw-medium;
+		color: $black;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width: 0;
+			height: 100%;
+			border-bottom: 1px solid $beige;
+			transition: $transition-long;
+		}
+
+		&.active {
+			&:before {
+				width: 100%;
+			}
+		}
+
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+}
+
+// .swiper-button-prev {
+// 	bacc
+// }

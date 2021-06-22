@@ -1,3 +1,6 @@
-import foo from './modules/module1';
+import tabs from './modules/tabs';
+import './modules/slider';
 
-foo();
+window.addEventListener('DOMContentLoaded', () => {
+	tabs();
+});

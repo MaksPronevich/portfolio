@@ -3,12 +3,9 @@
 	background-attachment: fixed;
 }
 
-.intro-wrap {
-	// display: grid;
-	// grid-template-columns: auto 1fr;
-	// align-items: center;
-	display: flex;
-	justify-content: space-between;
+.intro__wrap {
+	display: grid;
+	grid-template-columns: auto 1fr;
 	align-items: center;
 }
 
@@ -26,5 +23,15 @@
 		font-size: 1.286rem;
 		margin-top: 50px;
 		text-align: right;
+	}
+}
+
+.intro__img {
+	&--end {
+		margin-top: -150px;
+		grid-row-start: 2;
+		grid-column-start: 2;
+		grid-row-end: 3;
+		grid-column-end: 3;
 	}
 }

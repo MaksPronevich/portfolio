@@ -19,25 +19,15 @@
 			<!-- intro -->
 			<section class="section intro">
 				<div class="container">
-					<div class="intro-wrap">
-						<img src="img/intro/intro.png" alt="intro-img" />
+					<div class="intro__wrap">
+						<img src="img/intro/intro-img1.png" class="intro__img" alt="intro-img" />
 						<div class="intro-description">
 							<h1 class="intro-description__title">
-								Создаю красивые вещи, <br />с оглядкой на современный и
-								<br />стильный дизайн
+								Создаю красивые вещи, <br />с оглядкой на современный и <br />стильный дизайн
 							</h1>
 							<p class="intro-description__text">... помогу вам выделиться</p>
 						</div>
-					</div>
-					<div
-						class="intro-wrap"
-						style="justify-content: flex-end; margin-top: -150px"
-					>
-						<img
-							src="img/intro/intro2.png"
-							style="width: 650px"
-							alt="intro-img"
-						/>
+						<img class="intro__img intro__img--end" src="img/intro/intro-img2.png" alt="intro-img" />
 					</div>
 				</div>
 			</section>
@@ -54,7 +44,74 @@
 			<!-- portfolio -->
 			<section class="section portfolio">
 				<div class="container">
-					<h3 class="section__title">Портфолио</h3>
+					<div class="portfolio__wrap">
+						<div class="portfolio__left-col">
+							<div class="portfolio__item">
+								<img src="img/portfolio/illustrations.png" alt="Иллюстрации" />
+							</div>
+							<div class="portfolio__item">
+								<img src="img/portfolio/ribbon-inst.png" alt="Дизайн ленты Instagram" />
+							</div>
+							<div class="portfolio__item">
+								<img src="img/portfolio/stories-inst.png" alt="Дизайн Stories Instagram" />
+							</div>
+							<div class="portfolio__item">
+								<img src="img/portfolio/higlihts-inst.png" alt="Дизайн Highlights Instagram" />
+							</div>
+							<div class="portfolio__item active">
+								<div class="swiper-container portfolio-swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/portfolio/postcards1.png" alt="Дизайн открыток 1" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/portfolio/postcards2.png" alt="Дизайн открыток 2" />
+										</div>
+									</div>
+									<div class="swiper-pagination"></div>
+									<div class="swiper-button-prev portfolio-button-prev"></div>
+									<div class="swiper-button-next portfolio-button-next"></div>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio__right-col">
+							<h3 class="section__title">Портфолио</h3>
+							<nav class="portfolio-nav">
+								<ul class="portfolio-nav__list">
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Иллюстрации</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Дизайн ленты Instagram</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Дизайн Stories Instagram</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Дизайн Highlights Instagram</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link active">Дизайн открыток</a>
+									</li>
+									<!-- <li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Чек-листы, трекеры</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Планнеры</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Дизайн полиграфии</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Дизайн баннеров/аватара для соц.сетей</a>
+									</li>
+									<li class="portfolio-nav__item">
+										<a href="#" class="portfolio-nav__link">Созданий логотипов</a>
+									</li> -->
+								</ul>
+							</nav>
+						</div>
+					</div>
 				</div>
 			</section>
 			<!-- /portfolio -->
@@ -62,7 +119,40 @@
 			<!-- services -->
 			<section class="section services">
 				<div class="container">
-					<h3 class="section__title">Сервисы</h3>
+					<div class="services__wrap">
+						<div class="services-description">
+							<h3 class="section__title">Сервисы</h3>
+							<h4 class="services__title">Мои ключевые специализации:</h4>
+							<ul class="services__list">
+								<li class="services__item services__item--bg">оформление социальных сетей;</li>
+								<li class="services__item services__item--bg">логотипы и фирменный стиль;</li>
+								<li class="services__item services__item--bg">дизайн полиграфической продукции;</li>
+								<li class="services__item services__item--bg">интерфейсы и веб-дизайн.</li>
+							</ul>
+							<h4 class="services__title">Как будет проходить процесс работы?</h4>
+							<ul class="services__list">
+								<li class="services__item">
+									<span>01/ Предпроектный процесс</span>
+									<p>Обсудим ваши цели в отношении продукта и стоимость.</p>
+								</li>
+								<li class="services__item">
+									<span>02/ Подготовка контента</span>
+									<p>Обсудим все аспекты дизайна, влияющие на функциональность продукта.</p>
+								</li>
+								<li class="services__item">
+									<span>03/ Этап дизайна</span>
+									<p>Мы начинаем со стартовой стратегии, чтобы убедиться, что наши взгляды совпадают!</p>
+								</li>
+								<li class="services__item">
+									<span>04/ Финишные штрихи</span>
+									<p>
+										Я начинаю вносить ваши правки, пока мы оба не будем удовлетворены окончательным дизайном!
+									</p>
+								</li>
+							</ul>
+						</div>
+						<img src="img/services/illustration.png" alt="Иллюстрация" />
+					</div>
 				</div>
 			</section>
 			<!-- /services -->
