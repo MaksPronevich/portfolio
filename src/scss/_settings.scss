@@ -6,6 +6,7 @@
 
 html {
 	font-size: 14px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -14,7 +15,6 @@ body {
 	// font-family: 'Cormorant Unicase', serif;
 	font-family: 'Jura', sans-serif;
 	min-height: 100vh;
-	scroll-behavior: smooth;
 	text-rendering: optimizeSpeed;
 }
 

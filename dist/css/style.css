@@ -9,13 +9,13 @@
 
 html {
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1rem;
   font-family: 'Jura', sans-serif;
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
 
@@ -108,10 +108,20 @@ a {
 .section {
   padding: 50px 0px;
   border-bottom: 1px solid #a78c73;
+  border-top: 60px solid transparent;
+  margin-top: -60px;
+  background-clip: padding-box;
 }
 
 .section.intro {
   padding-top: 130px;
+}
+
+.section:before {
+  content: '';
+  display: block;
+  height: 500px;
+  margin: -500px 0 0;
 }
 
 .section__title {
@@ -227,6 +237,10 @@ a {
   grid-column-start: 2;
   grid-row-end: 3;
   grid-column-end: 3;
+}
+
+.about {
+  background: url("../img/section-bg.png") no-repeat left bottom;
 }
 
 .about__wrap {
