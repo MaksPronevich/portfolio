@@ -229,6 +229,36 @@ a {
   grid-column-end: 3;
 }
 
+.about__wrap {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.about__text {
+  font-size: 1.286rem;
+  line-height: 180%;
+  margin-top: 50px;
+}
+
+.about__images {
+  position: relative;
+}
+
+.about__img:nth-child(2) {
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.about__img:last-child {
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
 .portfolio__wrap {
   display: grid;
   grid-template-columns: 50% 1fr;
