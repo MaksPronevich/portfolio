@@ -2,7 +2,21 @@
 	&__wrap {
 		display: grid;
 		grid-template-columns: 50% 1fr;
-		gap: 8rem;
+		grid-template-areas: 'content nav';
+		gap: 3rem;
+
+		@include media-breakpoint-down($md) {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'nav' 'content';
+		}
+	}
+
+	&__left-col {
+		grid-area: content;
+	}
+
+	&__right-col {
+		grid-area: nav;
 	}
 
 	&__item {
@@ -55,7 +69,3 @@
 		}
 	}
 }
-
-// .swiper-button-prev {
-// 	bacc
-// }

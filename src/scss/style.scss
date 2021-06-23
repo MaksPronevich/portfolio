@@ -1,10 +1,11 @@
+// @import '../../node_modules/swiper/swiper-bundle.min.css';
 @import '../../node_modules/swiper/swiper-bundle.min.css';
 @import 'vars';
 @import 'mixins';
 @import 'settings';
 
 //blocks
-@import 'blocks/different';
+@import 'blocks/left-menu';
 @import 'blocks/slider';
 @import 'blocks/section';
 @import 'blocks/header';

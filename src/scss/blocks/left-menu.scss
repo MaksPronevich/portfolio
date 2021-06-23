@@ -1,0 +1,71 @@
+.left-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	background-color: $white;
+	// display: none;
+	transition: $transition-short;
+
+	width: 0;
+	overflow: hidden;
+
+	&__list {
+		padding: 30px;
+	}
+
+	&__item {
+		margin-bottom: 10px;
+	}
+
+	&__link {
+		font-size: 1.286rem;
+		font-family: 'Podkova', serif;
+		color: $black;
+		text-transform: uppercase;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width: 0;
+			height: 100%;
+			border-bottom: 1px solid $beige;
+			transition: $transition-long;
+		}
+
+		&:hover {
+			&:before {
+				width: 100%;
+			}
+		}
+	}
+
+	&__toggle-btn {
+		position: fixed;
+		bottom: 5%;
+		right: 5%;
+		z-index: 4;
+		display: none;
+
+		@include media-breakpoint-down($md) {
+			display: block;
+		}
+	}
+
+	&.active {
+		width: 100%;
+	}
+
+	@include media-breakpoint-up($md) {
+		display: none;
+	}
+
+	// @include media-breakpoint-down($md) {
+	// 	display: block;
+	// }
+}
