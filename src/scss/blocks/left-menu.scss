@@ -45,6 +45,10 @@
 	}
 
 	&__toggle-btn {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		background-color: $light-beige;
 		position: fixed;
 		bottom: 5%;
 		right: 5%;
@@ -52,7 +56,7 @@
 		display: none;
 
 		@include media-breakpoint-down($md) {
-			display: block;
+			display: inline-block;
 		}
 	}
 
@@ -63,8 +67,4 @@
 	@include media-breakpoint-up($md) {
 		display: none;
 	}
-
-	// @include media-breakpoint-down($md) {
-	// 	display: block;
-	// }
 }

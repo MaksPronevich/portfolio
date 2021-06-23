@@ -115,6 +115,10 @@ a {
 }
 
 .left-menu__toggle-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #d3c0ae;
   position: fixed;
   bottom: 5%;
   right: 5%;
@@ -454,7 +458,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .left-menu__toggle-btn {
-    display: block;
+    display: inline-block;
   }
 
   .header-logo-tablet {
