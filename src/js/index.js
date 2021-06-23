@@ -15,6 +15,7 @@ links.forEach(link =>
 	}),
 );
 
-toggleBtn.addEventListener('click', () => {
+toggleBtn.addEventListener('click', e => {
+	e.preventDefault();
 	leftMenu.classList.toggle('active');
 });
