@@ -6,6 +6,12 @@
 		align-items: center;
 		gap: 3rem;
 
+		img {
+			@include media-breakpoint-down($lg) {
+				margin: 0 auto;
+			}
+		}
+
 		@include media-breakpoint-down($lg) {
 			grid-template-columns: 1fr;
 		}

@@ -5,13 +5,15 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Евгения Гунько</title>
-		<link rel="icon" href="img/icon.png" sizes="16x16" type="image/png" />
+		<!-- <link rel="icon" href="img/icon.png" sizes="16x16" type="image/png" /> -->
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600&family=Jura:wght@300;500&family=Podkova&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
 		<link rel="stylesheet" href="css/style.min.css" />
+		<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 		<script src="js/index.js" defer></script>
 	</head>
 	<body>
@@ -114,7 +116,7 @@
 								<img src="img/portfolio/higlihts-inst.png" alt="Дизайн Highlights Instagram" />
 							</div>
 							<div class="portfolio__item">
-								<div class="swiper-container portfolio-slider" style="border: 1px solid #000">
+								<div class="swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<img src="img/portfolio/postcards1.png" alt="Дизайн открыток 1" />
@@ -124,8 +126,8 @@
 										</div>
 									</div>
 									<div class="swiper-pagination"></div>
-									<div class="swiper-button-prev"></div>
-									<div class="swiper-button-next"></div>
+									<div class="slider-button-prev"></div>
+									<div class="slider-button-next"></div>
 								</div>
 							</div>
 							<div class="portfolio__item">
@@ -135,7 +137,7 @@
 								<img src="img/portfolio/planners.png" alt="Планнеры" />
 							</div>
 							<div class="portfolio__item">
-								<div class="swiper-container portfolio-slider" style="border: 1px solid #000">
+								<div class="swiper-container">
 									<div class="swiper-wrapper">
 										<div class="swiper-slide">
 											<img src="img/portfolio/cutaways1.png" alt="Дизайн полиграфии 1" />
@@ -145,8 +147,8 @@
 										</div>
 									</div>
 									<div class="swiper-pagination"></div>
-									<div class="swiper-button-prev"></div>
-									<div class="swiper-button-next"></div>
+									<div class="slider-button-prev"></div>
+									<div class="slider-button-next"></div>
 								</div>
 							</div>
 							<div class="portfolio__item">
@@ -264,7 +266,9 @@
 			<!-- /left-menu -->
 
 			<!-- left-menu__link -->
-			<a href="#" class="left-menu__toggle-btn"> </a>
+			<a href="#" class="left-menu__toggle-btn">
+				<img src="img/left-menu-btn.svg" alt="Меню" />
+			</a>
 			<!-- /left-menu__link -->
 		</main>
 	</body>
