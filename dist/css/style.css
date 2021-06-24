@@ -83,6 +83,7 @@ a {
 
 .left-menu__list {
   padding: 30px;
+  background: url("../img/section-bg.png") no-repeat left bottom;
 }
 
 .left-menu__item {
@@ -131,26 +132,39 @@ a {
   visibility: visible;
 }
 
-.portfolio-slider .swiper-pagination-bullet {
+.swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #d3c0ae;
 }
 
-.portfolio-slider .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   background-color: #a78c73;
 }
 
-.portfolio-slider .swiper-button-next,
-.portfolio-slider .swiper-button-prev {
-  background-color: #000;
+.slider-button-next,
+.slider-button-prev {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 5;
 }
 
-.portfolio-slider .swiper-button-next::after,
-.portfolio-slider .swiper-button-prev::after {
-  content: '23';
-  color: #ffffff;
-  font-size: 80px;
+.slider-button-prev {
+  background: url("../img/slider/slider-btn-prev.svg") no-repeat center center;
+  left: 2%;
+  top: 50%;
+}
+
+.slider-button-next {
+  background: url("../img/slider/slider-btn-next.svg") no-repeat center center;
+  right: 2%;
+  top: 50%;
+}
+
+.swiper-slide img {
+  margin: 0 auto;
 }
 
 .section {

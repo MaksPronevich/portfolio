@@ -1,6 +1,6 @@
 import tabs from './modules/tabs';
-import './modules/left-menu';
 import './modules/slider';
+import './modules/left-menu';
 
 window.addEventListener('DOMContentLoaded', () => {
 	tabs();
