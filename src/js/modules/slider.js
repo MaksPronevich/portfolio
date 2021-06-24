@@ -1,14 +1,17 @@
-import Swiper, { Navigation, Pagination } from 'swiper/core';
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, Autoplay } from 'swiper/core';
+Swiper.use([Navigation, Pagination, Autoplay]);
 
-const swiper = new Swiper('.portfolio-swiper-container', {
+const swiper = new Swiper('.portfolio-slider', {
 	navigation: {
-		nextEl: '.portfolio-button-next',
-		prevEl: '.portfolio-button-prev',
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
 	},
+
 	pagination: {
 		el: '.swiper-pagination',
-		type: 'bullets',
 	},
-	autoplay: true,
+
+	autoplay: {
+		delay: 3000,
+	},
 });

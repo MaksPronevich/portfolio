@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Евгения Гунько</title>
+	<link rel="icon" href="img/icon.png" sizes="16x16" type="image/png" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
 	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600&family=Jura:wght@300;500&family=Podkova&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="css/style.min.css" />
@@ -26,7 +27,9 @@
 							<a href="#portfolio" class="header-nav__link">портфолио</a>
 						</li>
 						<li class="header-nav__item">
-							<a href="index.html" class="header-logo">LOGO</a>
+							<a href="index.html" class="header-logo">
+								<img src="img/logo.png" alt="Евгения Гунько" />
+							</a>
 						</li>
 						<li class="header-nav__item">
 							<a href="#services" class="header-nav__link">сервисы</a>
@@ -36,6 +39,9 @@
 						</li>
 					</ul>
 				</nav>
+				<a href="index.html" class="header-logo-tablet">
+					<img src="img/logo.png" alt="Евгения Гунько" />
+				</a>
 			</div>
 		</div>
 	</header>
@@ -46,14 +52,14 @@
 		<section class="section intro">
 			<div class="container">
 				<div class="intro__wrap">
-					<img src="img/intro/intro-img1.png" class="intro__img" alt="intro-img" />
+					<img src="img/intro/intro-img1.png" class="intro__img" alt="Вступление" />
 					<div class="intro-description">
 						<h1 class="intro-description__title">
 							Создаю красивые вещи, <br />с оглядкой на современный и <br />стильный дизайн
 						</h1>
 						<p class="intro-description__text">... помогу вам выделиться</p>
 					</div>
-					<img class="intro__img intro__img--end" src="img/intro/intro-img2.png" alt="intro-img" />
+					<img class="intro__img intro__img--end" src="img/intro/intro-img2.png" alt="Вступление" />
 				</div>
 			</div>
 		</section>
@@ -94,7 +100,7 @@
 			<div class="container">
 				<div class="portfolio__wrap">
 					<div class="portfolio__left-col">
-						<div class="portfolio__item">
+						<div class="portfolio__item active">
 							<img src="img/portfolio/illustrations.png" alt="Иллюстрации" />
 						</div>
 						<div class="portfolio__item">
@@ -106,8 +112,8 @@
 						<div class="portfolio__item">
 							<img src="img/portfolio/higlihts-inst.png" alt="Дизайн Highlights Instagram" />
 						</div>
-						<div class="portfolio__item active">
-							<div class="swiper-container portfolio-swiper-container">
+						<div class="portfolio__item">
+							<div class="swiper-container portfolio-slider" style="border: 1px solid #000">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<img src="img/portfolio/postcards1.png" alt="Дизайн открыток 1" />
@@ -117,9 +123,33 @@
 									</div>
 								</div>
 								<div class="swiper-pagination"></div>
-								<div class="swiper-button-prev portfolio-button-prev"></div>
-								<div class="swiper-button-next portfolio-button-next"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
 							</div>
+						</div>
+						<div class="portfolio__item">
+							<img src="img/portfolio/check-lists.png" alt="Чек-листы, трекеры" />
+						</div>
+						<div class="portfolio__item">
+							<img src="img/portfolio/planners.png" alt="Планнеры" />
+						</div>
+						<div class="portfolio__item">
+							<div class="swiper-container portfolio-slider" style="border: 1px solid #000">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/portfolio/cutaways1.png" alt="Дизайн полиграфии 1" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/portfolio/cutaways2.png" alt="Дизайн полиграфии 2" />
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+						<div class="portfolio__item">
+							<img src="img/portfolio/avatar.png" alt="Дизайн баннеров/аватара для соц.сетей" />
 						</div>
 					</div>
 					<div class="portfolio__right-col">
@@ -127,7 +157,7 @@
 						<nav class="portfolio-nav">
 							<ul class="portfolio-nav__list">
 								<li class="portfolio-nav__item">
-									<a href="#" class="portfolio-nav__link">Иллюстрации</a>
+									<a href="#" class="portfolio-nav__link active">Иллюстрации</a>
 								</li>
 								<li class="portfolio-nav__item">
 									<a href="#" class="portfolio-nav__link">Дизайн ленты Instagram</a>
@@ -139,23 +169,20 @@
 									<a href="#" class="portfolio-nav__link">Дизайн Highlights Instagram</a>
 								</li>
 								<li class="portfolio-nav__item">
-									<a href="#" class="portfolio-nav__link active">Дизайн открыток</a>
+									<a href="#" class="portfolio-nav__link">Дизайн открыток</a>
 								</li>
-								<!-- <li class="portfolio-nav__item">
-										<a href="#" class="portfolio-nav__link">Чек-листы, трекеры</a>
-									</li>
-									<li class="portfolio-nav__item">
-										<a href="#" class="portfolio-nav__link">Планнеры</a>
-									</li>
-									<li class="portfolio-nav__item">
-										<a href="#" class="portfolio-nav__link">Дизайн полиграфии</a>
-									</li>
-									<li class="portfolio-nav__item">
-										<a href="#" class="portfolio-nav__link">Дизайн баннеров/аватара для соц.сетей</a>
-									</li>
-									<li class="portfolio-nav__item">
-										<a href="#" class="portfolio-nav__link">Созданий логотипов</a>
-									</li> -->
+								<li class="portfolio-nav__item">
+									<a href="#" class="portfolio-nav__link">Чек-листы, трекеры</a>
+								</li>
+								<li class="portfolio-nav__item">
+									<a href="#" class="portfolio-nav__link">Планнеры</a>
+								</li>
+								<li class="portfolio-nav__item">
+									<a href="#" class="portfolio-nav__link">Дизайн полиграфии</a>
+								</li>
+								<li class="portfolio-nav__item">
+									<a href="#" class="portfolio-nav__link">Дизайн баннеров/аватара для соц.сетей</a>
+								</li>
 							</ul>
 						</nav>
 					</div>
@@ -213,7 +240,31 @@
 		</section>
 		<!-- /contacts -->
 
-		<!-- <a href="#" class="btn">Обо мне</a> -->
+		<!-- left-menu -->
+
+		<nav class="left-menu">
+			<ul class="left-menu__list">
+				<li class="left-menu__item">
+					<a href="#about" class="left-menu__link">обо мне</a>
+				</li>
+				<li class="left-menu__item">
+					<a href="#portfolio" class="left-menu__link">портфолио</a>
+				</li>
+
+				<li class="left-menu__item">
+					<a href="#services" class="left-menu__link">сервисы</a>
+				</li>
+				<li class="left-menu__item">
+					<a href="#contacts" class="left-menu__link">контакты</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- /left-menu -->
+
+		<!-- left-menu__link -->
+		<a href="#" class="left-menu__toggle-btn"> </a>
+		<!-- /left-menu__link -->
 	</main>
 </body>
 

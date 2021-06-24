@@ -1186,7 +1186,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _esm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\nvar leftMenu = document.querySelector('.left-menu');\nvar toggleBtn = document.querySelector('.left-menu__toggle-btn');\nvar links = document.querySelectorAll('.left-menu__item');\nlinks.forEach(function (link) {\n  return link.addEventListener('click', function () {\n    leftMenu.classList.remove('active');\n  });\n});\ntoggleBtn.addEventListener('click', function (e) {\n  e.preventDefault();\n  leftMenu.classList.toggle('active');\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
@@ -1198,7 +1198,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ \"./node_modules/swiper/swiper.esm.js\");\n\nswiper_core__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"Navigation\"], swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"Pagination\"]]);\nvar swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.portfolio-swiper-container', {\n  navigation: {\n    nextEl: '.portfolio-button-next',\n    prevEl: '.portfolio-button-prev'\n  },\n  pagination: {\n    el: '.swiper-pagination',\n    type: 'bullets'\n  },\n  autoplay: true\n});\n\n//# sourceURL=webpack:///./src/js/modules/slider.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/core */ \"./node_modules/swiper/swiper.esm.js\");\n\nswiper_core__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use([swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"Navigation\"], swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"Pagination\"], swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"Autoplay\"]]);\nvar swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('.portfolio-slider', {\n  navigation: {\n    nextEl: '.swiper-button-next',\n    prevEl: '.swiper-button-prev'\n  },\n  pagination: {\n    el: '.swiper-pagination'\n  },\n  autoplay: {\n    delay: 3000\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/slider.js?");
 
 /***/ }),
 

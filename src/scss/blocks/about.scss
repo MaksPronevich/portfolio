@@ -1,11 +1,17 @@
 .about {
-	background: url('../img/section-bg.png') no-repeat left bottom;
+	&__description {
+		background: url('../img/section-bg.png') no-repeat left bottom/cover;
+	}
 
 	&__wrap {
 		display: grid;
 		grid-template-columns: 50% 1fr;
 		justify-content: space-between;
 		gap: 3rem;
+
+		@include media-breakpoint-down($md) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__text {
@@ -22,12 +28,28 @@
 		&:nth-child(2) {
 			margin-top: 20px;
 			margin-left: auto;
+
+			@include media-breakpoint-down($md) {
+				margin: auto;
+			}
 		}
 
 		&:last-child {
 			position: absolute;
 			right: 0;
 			top: 30%;
+
+			@include media-breakpoint-down($md) {
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				position: relative;
+			}
+		}
+
+		@include media-breakpoint-down($md) {
+			margin-top: 10px;
 		}
 	}
 }
