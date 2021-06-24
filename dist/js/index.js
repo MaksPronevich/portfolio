@@ -1186,7 +1186,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _esm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\nvar leftMenu = document.querySelector('.left-menu');\nvar toggleBtn = document.querySelector('.left-menu__toggle-btn');\nvar links = document.querySelectorAll('.left-menu__item');\nlinks.forEach(function (link) {\n  return link.addEventListener('click', function () {\n    leftMenu.classList.remove('active');\n  });\n});\ntoggleBtn.addEventListener('click', function (e) {\n  e.preventDefault();\n  leftMenu.classList.toggle('active');\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_left_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/left-menu */ \"./src/js/modules/left-menu.js\");\n/* harmony import */ var _modules_left_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_left_menu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/left-menu.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/left-menu.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var leftMenu = document.querySelector('.left-menu');\nvar toggleBtn = document.querySelector('.left-menu__toggle-btn');\nvar links = document.querySelectorAll('.left-menu__item');\n\nvar bodyLock = function bodyLock() {\n  document.body.style.overflow = 'hidden';\n};\n\nvar bodyUnLock = function bodyUnLock() {\n  document.body.style.overflow = 'auto';\n};\n\nlinks.forEach(function (link) {\n  return link.addEventListener('click', function () {\n    leftMenu.classList.remove('active');\n    bodyUnLock();\n    toggleBtn.firstElementChild.src = 'img/left-menu-btn.svg';\n  });\n});\ntoggleBtn.addEventListener('click', function (e) {\n  e.preventDefault();\n  leftMenu.classList.toggle('active');\n\n  if (leftMenu.classList.contains('active')) {\n    bodyLock();\n    toggleBtn.firstElementChild.src = 'img/left-menu-btn-active.svg';\n  } else {\n    toggleBtn.firstElementChild.src = 'img/left-menu-btn.svg';\n    bodyUnLock();\n  }\n});\n\n//# sourceURL=webpack:///./src/js/modules/left-menu.js?");
 
 /***/ }),
 

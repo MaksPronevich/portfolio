@@ -8,8 +8,8 @@
 	background-color: $white;
 	transition: $transition-short;
 
-	width: 0;
-	overflow: hidden;
+	opacity: 0;
+	visibility: hidden;
 
 	&__list {
 		padding: 30px;
@@ -45,15 +45,14 @@
 	}
 
 	&__toggle-btn {
-		width: 60px;
-		height: 60px;
+		display: none;
 		border-radius: 50%;
 		background-color: $light-beige;
+		box-shadow: 0px 0px 10px $black;
 		position: fixed;
 		bottom: 5%;
 		right: 5%;
 		z-index: 4;
-		display: none;
 
 		@include media-breakpoint-down($md) {
 			display: inline-block;
@@ -61,10 +60,11 @@
 	}
 
 	&.active {
-		width: 100%;
+		opacity: 1;
+		visibility: visible;
 	}
 
-	@include media-breakpoint-up($md) {
-		display: none;
-	}
+	// @include media-breakpoint-up($md) {
+	// 	display: none;
+	// }
 }

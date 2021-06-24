@@ -13,6 +13,10 @@
 
 	&__left-col {
 		grid-area: content;
+
+		@include media-breakpoint-down($md) {
+			margin: 0 auto;
+		}
 	}
 
 	&__right-col {

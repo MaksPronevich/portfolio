@@ -77,8 +77,8 @@ a {
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
-  width: 0;
-  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .left-menu__list {
@@ -115,19 +115,20 @@ a {
 }
 
 .left-menu__toggle-btn {
-  width: 60px;
-  height: 60px;
+  display: none;
   border-radius: 50%;
   background-color: #d3c0ae;
+  -webkit-box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0px 0px 10px #000000;
   position: fixed;
   bottom: 5%;
   right: 5%;
   z-index: 4;
-  display: none;
 }
 
 .left-menu.active {
-  width: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 .portfolio-slider .swiper-pagination-bullet {
@@ -201,18 +202,13 @@ a {
   z-index: 2;
 }
 
-.header-logo img {
-  display: inline-block;
-  margin: 0 auto;
-}
-
 .header-logo-tablet {
   display: none;
 }
 
 .header-nav__list {
   display: grid;
-  grid-template-columns: auto auto 1fr auto auto;
+  grid-template-columns: auto auto auto auto auto;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -294,7 +290,7 @@ a {
 }
 
 .about__description {
-  background: url("../img/section-bg.png") no-repeat left bottom/cover;
+  background: url("../img/section-bg.png") no-repeat left bottom;
 }
 
 .about__wrap {
@@ -438,12 +434,6 @@ a {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .left-menu {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 1200px) {
   .intro__img--end {
     margin-top: -50px;
@@ -451,6 +441,10 @@ a {
 }
 
 @media screen and (max-width: 992px) {
+  .services__wrap img {
+    margin: 0 auto;
+  }
+
   .services__wrap {
     grid-template-columns: 1fr;
   }
@@ -459,6 +453,18 @@ a {
 @media screen and (max-width: 768px) {
   .left-menu__toggle-btn {
     display: inline-block;
+  }
+
+  .section.about,
+  .section.portfolio,
+  .section.services {
+    padding: 50px 25px;
+  }
+
+  .section.about,
+  .section.portfolio,
+  .section.services {
+    padding: 50px 0px;
   }
 
   .header-logo-tablet {
@@ -500,7 +506,7 @@ a {
   }
 
   .about__img:nth-child(2) {
-    margin: auto;
+    margin: 20px auto 0;
   }
 
   .about__img:last-child {
@@ -509,14 +515,20 @@ a {
     bottom: 0;
     left: 0;
     position: relative;
+    margin-top: 20px;
   }
 
   .about__img {
     margin-top: 10px;
+    margin: 0 auto;
   }
 
   .portfolio__wrap {
     grid-template-columns: 1fr;
     grid-template-areas: 'nav' 'content';
+  }
+
+  .portfolio__left-col {
+    margin: 0 auto;
   }
 }

@@ -1,6 +1,6 @@
 .about {
 	&__description {
-		background: url('../img/section-bg.png') no-repeat left bottom/cover;
+		background: url('../img/section-bg.png') no-repeat left bottom;
 	}
 
 	&__wrap {
@@ -30,7 +30,7 @@
 			margin-left: auto;
 
 			@include media-breakpoint-down($md) {
-				margin: auto;
+				margin: 20px auto 0;
 			}
 		}
 
@@ -45,11 +45,13 @@
 				bottom: 0;
 				left: 0;
 				position: relative;
+				margin-top: 20px;
 			}
 		}
 
 		@include media-breakpoint-down($md) {
 			margin-top: 10px;
+			margin: 0 auto;
 		}
 	}
 }

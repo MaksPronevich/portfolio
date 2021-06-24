@@ -9,12 +9,12 @@
 	z-index: 2;
 }
 
-.header-logo {
-	img {
-		display: inline-block;
-		margin: 0 auto;
-	}
-}
+// .header-logo {
+// 	img {
+// 		display: inline-block;
+// 		margin: 0 auto;
+// 	}
+// }
 
 .header-logo-tablet {
 	display: none;
@@ -34,7 +34,7 @@
 .header-nav {
 	&__list {
 		display: grid;
-		grid-template-columns: auto auto 1fr auto auto;
+		grid-template-columns: auto auto auto auto auto;
 		justify-content: space-between;
 		align-items: center;
 	}
