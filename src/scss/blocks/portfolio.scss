@@ -6,17 +6,13 @@
 		gap: 3rem;
 
 		@include media-breakpoint-down($md) {
-			grid-template-columns: 1fr;
+			grid-template-columns: 100%;
 			grid-template-areas: 'nav' 'content';
 		}
 	}
 
 	&__left-col {
 		grid-area: content;
-
-		@include media-breakpoint-down($md) {
-			margin: 0 auto;
-		}
 	}
 
 	&__right-col {
@@ -28,6 +24,12 @@
 
 		&.active {
 			display: block;
+		}
+
+		img {
+			@include media-breakpoint-down($md) {
+				margin: 0 auto;
+			}
 		}
 	}
 }

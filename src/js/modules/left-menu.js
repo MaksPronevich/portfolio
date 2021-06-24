@@ -1,4 +1,4 @@
-const leftMenu = document.querySelector('.left-menu');
+const leftMenu = document.querySelector('.left-menu-wrap');
 const toggleBtn = document.querySelector('.left-menu__toggle-btn');
 const links = document.querySelectorAll('.left-menu__item');
 
