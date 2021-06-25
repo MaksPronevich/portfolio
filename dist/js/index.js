@@ -1186,19 +1186,43 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _esm
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_left_menu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/left-menu */ \"./src/js/modules/left-menu.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_modules_left_menu__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_preloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/preloader */ \"./src/js/modules/preloader.js\");\n/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ \"./src/js/modules/tabs.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./src/js/modules/slider.js\");\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/menu */ \"./src/js/modules/menu.js\");\n\n\n\n\nObject(_modules_preloader__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\nwindow.addEventListener('DOMContentLoaded', function () {\n  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  Object(_modules_menu__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\n});\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
-/***/ "./src/js/modules/left-menu.js":
+/***/ "./src/js/modules/body.js":
+/*!********************************!*\
+  !*** ./src/js/modules/body.js ***!
+  \********************************/
+/*! exports provided: bodyLock, bodyUnLock */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"bodyLock\", function() { return bodyLock; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"bodyUnLock\", function() { return bodyUnLock; });\nvar bodyLock = function bodyLock() {\n  document.body.style.overflow = 'hidden';\n};\n\nvar bodyUnLock = function bodyUnLock() {\n  document.body.style.overflow = 'auto';\n};\n\n\n\n//# sourceURL=webpack:///./src/js/modules/body.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/menu.js":
+/*!********************************!*\
+  !*** ./src/js/modules/menu.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _body__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./body */ \"./src/js/modules/body.js\");\n\n\nvar menu = function menu() {\n  var menu = document.querySelector('.menu-wrap');\n  var toggleBtn = document.querySelector('.menu__toggle-btn');\n  var links = document.querySelectorAll('.menu__item');\n  links.forEach(function (link) {\n    return link.addEventListener('click', function () {\n      menu.classList.remove('active');\n      Object(_body__WEBPACK_IMPORTED_MODULE_0__[\"bodyUnLock\"])();\n      toggleBtn.firstElementChild.src = 'img/menu/menu-btn.svg';\n    });\n  });\n  toggleBtn.addEventListener('click', function (e) {\n    e.preventDefault();\n    menu.classList.toggle('active');\n\n    if (menu.classList.contains('active')) {\n      Object(_body__WEBPACK_IMPORTED_MODULE_0__[\"bodyLock\"])();\n      toggleBtn.firstElementChild.src = 'img/menu/menu-btn-active.svg';\n    } else {\n      toggleBtn.firstElementChild.src = 'img//menu/menu-btn.svg';\n      Object(_body__WEBPACK_IMPORTED_MODULE_0__[\"bodyUnLock\"])();\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (menu);\n\n//# sourceURL=webpack:///./src/js/modules/menu.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/preloader.js":
 /*!*************************************!*\
-  !*** ./src/js/modules/left-menu.js ***!
+  !*** ./src/js/modules/preloader.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar menu = function menu() {\n  var menu = document.querySelector('.menu-wrap');\n  var toggleBtn = document.querySelector('.menu__toggle-btn');\n  var links = document.querySelectorAll('.menu__item');\n\n  var bodyLock = function bodyLock() {\n    document.body.style.overflow = 'hidden';\n  };\n\n  var bodyUnLock = function bodyUnLock() {\n    document.body.style.overflow = 'auto';\n  };\n\n  links.forEach(function (link) {\n    return link.addEventListener('click', function () {\n      menu.classList.remove('active');\n      bodyUnLock();\n      toggleBtn.firstElementChild.src = 'img/menu/menu-btn.svg';\n    });\n  });\n  toggleBtn.addEventListener('click', function (e) {\n    e.preventDefault();\n    menu.classList.toggle('active');\n\n    if (menu.classList.contains('active')) {\n      bodyLock();\n      toggleBtn.firstElementChild.src = 'img/menu/menu-btn-active.svg';\n    } else {\n      toggleBtn.firstElementChild.src = 'img//menu/menu-btn.svg';\n      bodyUnLock();\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (menu);\n\n//# sourceURL=webpack:///./src/js/modules/left-menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _body__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./body */ \"./src/js/modules/body.js\");\n\n\nvar preloader = function preloader() {\n  setTimeout(function () {\n    document.querySelector('.preloader').classList.add('hide');\n  }, 3000);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (preloader);\n\n//# sourceURL=webpack:///./src/js/modules/preloader.js?");
 
 /***/ }),
 

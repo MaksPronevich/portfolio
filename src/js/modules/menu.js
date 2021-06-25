@@ -1,15 +1,9 @@
+import { bodyLock, bodyUnLock } from './body';
+
 const menu = () => {
 	const menu = document.querySelector('.menu-wrap');
 	const toggleBtn = document.querySelector('.menu__toggle-btn');
 	const links = document.querySelectorAll('.menu__item');
-
-	const bodyLock = () => {
-		document.body.style.overflow = 'hidden';
-	};
-
-	const bodyUnLock = () => {
-		document.body.style.overflow = 'auto';
-	};
 
 	links.forEach(link =>
 		link.addEventListener('click', () => {

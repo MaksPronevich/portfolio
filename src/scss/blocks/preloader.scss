@@ -7,13 +7,14 @@
 	z-index: 999;
 	background-color: $white;
 	display: flex;
+	transition: $transition-long;
 
 	&__content {
 		margin: auto;
-		// padding: 50px;
 		padding: 15px;
 
 		display: grid;
+		grid-template-columns: auto auto;
 		grid-template-areas: 'top top' 'left right';
 		row-gap: 2rem;
 
@@ -35,6 +36,11 @@
 				animation-name: right-to-center;
 			}
 		}
+	}
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 

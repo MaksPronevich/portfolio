@@ -77,12 +77,16 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .preloader__content {
   margin: auto;
   padding: 15px;
   display: grid;
+  grid-template-columns: auto auto;
   grid-template-areas: 'top top' 'left right';
   row-gap: 2rem;
 }
@@ -111,6 +115,11 @@ a {
   grid-area: right;
   -webkit-animation-name: right-to-center;
   animation-name: right-to-center;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 
 @-webkit-keyframes top-to-center {
