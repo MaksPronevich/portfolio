@@ -1,0 +1,75 @@
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background-color: $white;
+	display: flex;
+
+	&__content {
+		margin: auto;
+		// padding: 50px;
+		padding: 15px;
+
+		display: grid;
+		grid-template-areas: 'top top' 'left right';
+		row-gap: 2rem;
+
+		img {
+			position: relative;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+
+			&:nth-child(1) {
+				grid-area: top;
+				animation-name: top-to-center;
+			}
+			&:nth-child(2) {
+				grid-area: left;
+				animation-name: left-to-center;
+			}
+			&:nth-child(3) {
+				grid-area: right;
+				animation-name: right-to-center;
+			}
+		}
+	}
+}
+
+@keyframes top-to-center {
+	0% {
+		opacity: 0;
+		top: -100px;
+	}
+
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+@keyframes left-to-center {
+	0% {
+		opacity: 0;
+		left: -100px;
+	}
+
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+@keyframes right-to-center {
+	0% {
+		opacity: 0;
+		right: -100px;
+	}
+
+	100% {
+		opacity: 1;
+		right: 0;
+	}
+}
