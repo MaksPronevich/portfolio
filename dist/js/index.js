@@ -1222,7 +1222,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _body__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./body */ \"./src/js/modules/body.js\");\n\n\nvar preloader = function preloader() {\n  setTimeout(function () {\n    document.querySelector('.preloader').classList.add('hide');\n  }, 3000);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (preloader);\n\n//# sourceURL=webpack:///./src/js/modules/preloader.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _body__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./body */ \"./src/js/modules/body.js\");\n\n\nvar preloader = function preloader() {\n  setTimeout(function () {\n    document.querySelector('.preloader').classList.add('hide');\n  }, 5000);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (preloader);\n\n//# sourceURL=webpack:///./src/js/modules/preloader.js?");
 
 /***/ }),
 

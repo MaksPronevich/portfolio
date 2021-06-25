@@ -1,52 +1,54 @@
 .preloader {
+	display: flex;
+	background-color: $white;
 	position: fixed;
 	left: 0;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	z-index: 999;
-	background-color: $white;
-	display: flex;
-	transition: $transition-long;
 
 	&__content {
-		margin: auto;
-		padding: 15px;
-
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-template-areas: 'top top' 'left right';
 		row-gap: 2rem;
+		justify-content: space-between;
+		margin: auto;
+		padding: 15px;
 
 		img {
 			position: relative;
-			animation-duration: 1.5s;
+			opacity: 0;
+			animation-duration: 2s;
 			animation-fill-mode: forwards;
+			animation-delay: 2s;
 
 			&:nth-child(1) {
 				grid-area: top;
+				top: -100px;
 				animation-name: top-to-center;
 			}
 			&:nth-child(2) {
 				grid-area: left;
+				left: -100px;
 				animation-name: left-to-center;
 			}
 			&:nth-child(3) {
 				grid-area: right;
+				right: -100px;
 				animation-name: right-to-center;
 			}
 		}
 	}
 
 	&.hide {
-		opacity: 0;
-		visibility: hidden;
+		display: none;
 	}
 }
 
 @keyframes top-to-center {
 	0% {
-		opacity: 0;
 		top: -100px;
 	}
 
@@ -58,7 +60,6 @@
 
 @keyframes left-to-center {
 	0% {
-		opacity: 0;
 		left: -100px;
 	}
 
@@ -70,7 +71,6 @@
 
 @keyframes right-to-center {
 	0% {
-		opacity: 0;
 		right: -100px;
 	}
 

@@ -11,11 +11,10 @@ html {
 
 body {
 	font-size: 1rem;
-	// font-family: 'Podkova', serif;
-	// font-family: 'Cormorant Unicase', serif;
 	font-family: 'Jura', sans-serif;
 	min-height: 100vh;
 	text-rendering: optimizeSpeed;
+	color: $black;
 }
 
 ul,
@@ -63,29 +62,4 @@ a {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0px 15px;
-
-	// @include media-breakpoint-up($xxl) {
-	// 	max-width: 1320px;
-	// }
-
-	// @include media-breakpoint-up($xl) {
-	// 	max-width: 1140px;
-	// }
-
-	// @include media-breakpoint-up($lg) {
-	// 	max-width: 960px;
-	// }
-
-	// @include media-breakpoint-up($md) {
-	// 	max-width: 720px;
-	// }
-
-	// @include media-breakpoint-up($sm) {
-	// 	max-width: 540px;
-	// }
-
-	// @include media-breakpoint-down($sm) {
-	// 	max-width: auto;
-	// 	padding: 0px 15px;
-	// }
 }

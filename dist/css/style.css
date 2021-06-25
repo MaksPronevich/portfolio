@@ -17,6 +17,7 @@ body {
   font-family: 'Jura', sans-serif;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  color: #000000;
 }
 
 ul,
@@ -67,64 +68,68 @@ a {
 }
 
 .preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 999;
-  background-color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: 0.5s linear;
-  -o-transition: 0.5s linear;
-  transition: 0.5s linear;
 }
 
 .preloader__content {
-  margin: auto;
-  padding: 15px;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-areas: 'top top' 'left right';
   row-gap: 2rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: auto;
+  padding: 15px;
 }
 
 .preloader__content img {
   position: relative;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  opacity: 0;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 .preloader__content img:nth-child(1) {
   grid-area: top;
+  top: -100px;
   -webkit-animation-name: top-to-center;
   animation-name: top-to-center;
 }
 
 .preloader__content img:nth-child(2) {
   grid-area: left;
+  left: -100px;
   -webkit-animation-name: left-to-center;
   animation-name: left-to-center;
 }
 
 .preloader__content img:nth-child(3) {
   grid-area: right;
+  right: -100px;
   -webkit-animation-name: right-to-center;
   animation-name: right-to-center;
 }
 
 .preloader.hide {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 @-webkit-keyframes top-to-center {
   0% {
-    opacity: 0;
     top: -100px;
   }
 
@@ -136,7 +141,6 @@ a {
 
 @keyframes top-to-center {
   0% {
-    opacity: 0;
     top: -100px;
   }
 
@@ -148,7 +152,6 @@ a {
 
 @-webkit-keyframes left-to-center {
   0% {
-    opacity: 0;
     left: -100px;
   }
 
@@ -160,7 +163,6 @@ a {
 
 @keyframes left-to-center {
   0% {
-    opacity: 0;
     left: -100px;
   }
 
@@ -172,7 +174,6 @@ a {
 
 @-webkit-keyframes right-to-center {
   0% {
-    opacity: 0;
     right: -100px;
   }
 
@@ -184,7 +185,6 @@ a {
 
 @keyframes right-to-center {
   0% {
-    opacity: 0;
     right: -100px;
   }
 
@@ -242,7 +242,6 @@ a {
 .menu__toggle-btn {
   display: none;
   border-radius: 50%;
-  background-color: #d3c0ae;
   -webkit-box-shadow: 0px 0px 10px #000000;
   box-shadow: 0px 0px 10px #000000;
   position: fixed;
@@ -324,39 +323,26 @@ a {
 }
 
 .header {
-  border-bottom: 1px solid #a78c73;
-  padding: 15px 0px;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 5px #a78c73;
-  box-shadow: 0px 0px 5px #a78c73;
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: 1px solid #a78c73;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px #a78c73;
+  box-shadow: 0px 0px 5px #a78c73;
+  padding: 15px 0px;
   z-index: 2;
-}
-
-.header-logo-tablet {
-  display: none;
 }
 
 .header-nav__list {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: repeat(5, auto);
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.header-nav__item {
-  margin-right: 55px;
-  text-align: center;
-}
-
-.header-nav__item:last-child {
-  margin-right: 0;
 }
 
 .header-nav__link {
@@ -382,6 +368,10 @@ a {
 
 .header-nav__link:hover:before {
   width: 100%;
+}
+
+.header__logo-tablet {
+  display: none;
 }
 
 .intro {
@@ -567,6 +557,81 @@ a {
   margin-bottom: 0;
 }
 
+.contacts__wrap {
+  display: grid;
+  grid-template-columns: auto auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contacts__title {
+  font-size: 1.286rem;
+  margin: 30px 0px 20px;
+}
+
+.contacts__right-col {
+  background: url("../img/section-bg.png") no-repeat left bottom;
+  padding: 200px 0px 20px;
+}
+
+.contacts__text {
+  font-size: 1.286rem;
+  font-weight: 500;
+}
+
+.contacts__text span {
+  color: #a78c73;
+  text-transform: uppercase;
+}
+
+.contacts__text:last-child {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.contacts-nav__list {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+
+.contacts-nav__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: 'Podkova', serif;
+  font-size: 1.286rem;
+  color: #404040;
+}
+
+.contacts-nav__link span {
+  margin-left: 10px;
+  position: relative;
+}
+
+.contacts-nav__link span:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 0;
+  height: 100%;
+  border-bottom: 1px solid #a78c73;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.contacts-nav__link:hover span:before {
+  width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .intro__img--end {
     margin-top: -50px;
@@ -594,31 +659,29 @@ a {
 
   .section.about,
   .section.portfolio,
-  .section.services {
+  .section.services,
+  .section.contacts {
     padding: 50px 25px;
   }
 
-  .section.about,
-  .section.portfolio,
-  .section.services {
-    padding: 50px 0px;
-  }
-
-  .header-logo-tablet {
-    display: block;
-  }
-
-  .header-wrap {
+  .header__wrap {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .header-nav {
     display: none;
+  }
+
+  .header__logo-tablet {
+    display: block;
   }
 
   .intro__wrap {
@@ -667,5 +730,27 @@ a {
 
   .portfolio__item img {
     margin: 0 auto;
+  }
+
+  .contacts__wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .section.about,
+  .section.portfolio,
+  .section.services,
+  .section.contacts {
+    padding: 50px 0px;
+  }
+
+  .contacts__right-col {
+    padding: 80px 0px 20px;
+  }
+
+  .contacts-nav__list {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 }
