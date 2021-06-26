@@ -1,5 +1,3 @@
-import { bodyLock, bodyUnLock } from './body';
-
 const preloader = () => {
 	setTimeout(() => {
 		document.querySelector('.preloader').classList.add('hide');

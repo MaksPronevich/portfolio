@@ -13,7 +13,7 @@
 		grid-template-columns: auto auto;
 		grid-template-areas: 'top top' 'left right';
 		row-gap: 2rem;
-		justify-content: space-between;
+		justify-content: center;
 		margin: auto;
 		padding: 15px;
 
@@ -37,6 +37,7 @@
 			&:nth-child(3) {
 				grid-area: right;
 				right: -100px;
+				margin-left: auto;
 				animation-name: right-to-center;
 			}
 		}
