@@ -134,7 +134,7 @@ const jsProd = () => {
 	return src(path.src.js)
 		.pipe(
 			webpackStream({
-				mode: 'development',
+				mode: 'production',
 				output: {
 					filename: 'index.js',
 				},
@@ -164,16 +164,16 @@ const watchFiles = () => {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.img], images);
-	gulp.watch([path.watch.js], js);
+	gulp.watch([path.watch.js], jsProd);
 };
 
-const build = gulp.series(clean, gulp.parallel(html, css, images, js));
+const build = gulp.series(clean, gulp.parallel(html, css, images, jsProd));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 exports.html = html;
 exports.css = css;
 exports.images = images;
-exports.js = js;
+exports.jsProd = jsProd;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
